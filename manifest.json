@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "ГВД рынок",
+    "version": "1.0",
+    "description": "ГВД рынок",
+    "host_permissions": [
+        "https://www.heroeswm.ru/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.heroeswm.ru/*"
+            ],
+            "js": [
+                "start.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "inject.js"
+            ],
+            "matches": [
+                "https://www.heroeswm.ru/*"
+            ]
+        }
+    ]
+}
